@@ -1,0 +1,69 @@
+{
+  "project": {
+    "name": "Cabezal 4 pilotes",
+    "code": "CAP-01",
+    "design_code": "ACI318"
+  },
+  "geometry": {
+    "length": 2.4,
+    "width": 2.4,
+    "height": 0.9,
+    "cover_bottom": 0.075,
+    "cover_side": 0.075,
+    "column_x": 1.2,
+    "column_y": 1.2,
+    "column_width": 0.4,
+    "column_length": 0.4,
+    "main_bar_diameter": 0.02,
+    "stirrup_diameter": 0.0
+  },
+  "piles": [
+    {
+      "id": "P1",
+      "x": 0.6,
+      "y": 0.6,
+      "shape": "circular",
+      "diameter": 0.4,
+      "allowable_reaction": 600
+    },
+    {
+      "id": "P2",
+      "x": 1.8,
+      "y": 0.6,
+      "shape": "circular",
+      "diameter": 0.4,
+      "allowable_reaction": 600
+    },
+    {
+      "id": "P3",
+      "x": 0.6,
+      "y": 1.8,
+      "shape": "circular",
+      "diameter": 0.4,
+      "allowable_reaction": 600
+    },
+    {
+      "id": "P4",
+      "x": 1.8,
+      "y": 1.8,
+      "shape": "circular",
+      "diameter": 0.4,
+      "allowable_reaction": 600
+    }
+  ],
+  "materials": {
+    "fc": 28,
+    "fy": 420,
+    "phi_steel": 0.9,
+    "phi_shear": 0.75,
+    "beta_s": 0.75,
+    "beta_n": 0.8
+  },
+  "loads": {
+    "Pu": 1800,
+    "Mux": 120,
+    "Muy": 80,
+    "Vux": 150,
+    "Vuy": 100
+  }
+}
