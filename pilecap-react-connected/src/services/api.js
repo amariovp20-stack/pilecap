@@ -1,7 +1,13 @@
 const defaultApiBase = import.meta.env.VITE_API_BASE_URL || "/api";
 
+// Use relative path in development (with proxy) and full URL in production
+const getApiUrl = (endpoint) => {
+  const base = import.meta.env.DEV ? "/api" : (import.meta.env.VITE_API_BASE_URL || "/api");
+  return `${base.replace(/\/$/, "")}${endpoint}`;
+};
+
 export async function designPileCap(data, apiBase = defaultApiBase) {
-  const url = `${apiBase.replace(/\/$/, "")}/pilecap/design`;
+  const url = getApiUrl("/pilecap/design");
 
   const response = await fetch(url, {
     method: "POST",
